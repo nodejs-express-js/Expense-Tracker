@@ -1,0 +1,26 @@
+/* EachExpense.module.css */
+
+.card {
+    
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem;
+  }
+  .minicontainer{
+    display: flex;
+    justify-content: space-between;
+  }
+  .date {
+    font-weight: bold;
+  }
+  
+  .expense {
+    margin-top: 8px;
+  }
+  
+  .expensetype {
+    font-style: italic;
+    
+  }
+  
