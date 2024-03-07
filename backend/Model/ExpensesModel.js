@@ -13,6 +13,10 @@ const expensesSchema=mongoose.Schema(
         date:{
             type:"String",
             requried:true,
+        },
+        userid:{
+            type:"String",
+            required:true,
         }
     }
     ,{ timestamps: true }

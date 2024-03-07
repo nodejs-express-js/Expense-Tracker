@@ -7,11 +7,12 @@ require("dotenv").config()
 const app=express()
 const expensesRouter=require("./Router/ExpensesRouter")
 const userRouter=require("./Router/UserRouter")
-
+const protectExpenses=require("./Middleware/ProtectingExpenses")
 app.use(cors())
 app.use(express.json())
 
 app.use("/user",userRouter)
+app.use(protectExpenses)
 app.use("/expenses",expensesRouter)
 
 mongoose.connect(process.env.MONGODB_URI).then(()=>{

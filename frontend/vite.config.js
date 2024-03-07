@@ -6,7 +6,8 @@ export default defineConfig({
   plugins: [react()],
   server:{
     proxy:{
-      "/expenses":"http://localhost:4000/"
+      "/expenses":"http://localhost:4000/",
+      "/user":"http://localhost:4000/",
     }
   }
 })

@@ -2,7 +2,7 @@ const expensesModel=require("../Model/ExpensesModel")
 
 const getExpenses=async(req,res)=>{
     try{
-        const expenses=await expensesModel.find({})
+        const expenses=await expensesModel.find({userid:req.user._id})
         res.status(200).json(expenses)
     }
     catch(error){
@@ -13,7 +13,7 @@ const getExpenses=async(req,res)=>{
 
 const postExpenses=async(req,res)=>{
     try{
-        const expenses=await expensesModel.create(req.body)
+        const expenses=await expensesModel.create({...req.body,userid:req.user._id})
         res.status(200).json(expenses)
     }
     catch(error){
@@ -24,7 +24,7 @@ const postExpenses=async(req,res)=>{
 
 const deleteExpenses=async(req,res)=>{
     try{
-        const expenses=await expensesModel.deleteOne({_id:req.params.id})
+        const expenses=await expensesModel.deleteOne({_id:req.params.id,userid:req.user._id})
         res.status(200).json(expenses)
     }
     catch(error){
@@ -35,7 +35,7 @@ const deleteExpenses=async(req,res)=>{
 
 const patchExpenses=async(req,res)=>{
     try{
-        const expenses=await expensesModel.replaceOne({_id:req.params.id},req.body)
+        const expenses=await expensesModel.replaceOne({_id:req.params.id,userid:req.user._id},{...req.body,userid:req.user._id})
         res.status(200).json(expenses)
     }
     catch(error){
