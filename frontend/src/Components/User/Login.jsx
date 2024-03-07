@@ -16,7 +16,7 @@ const Login = () => {
     <div>
       <Navbar />
       <div className={styles.formContainer}>
-        <form action='#'>
+        <div >
           <label className={styles.label}>Email</label>
           <input
             type='text'
@@ -39,7 +39,7 @@ const Login = () => {
             Login
           </button>
           {error && <div className={styles.error}>{error}</div>}
-        </form>
+        </div>
       </div>
     </div>
   );

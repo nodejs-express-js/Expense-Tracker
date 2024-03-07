@@ -13,7 +13,7 @@ const Navbar = () => {
   }
   return (
     <div className={styles.container}>
-      <div>Expenses Tracker</div>
+      <div onClick={()=>{navigate("/")}} style={{cursor:"pointer"}}>Expenses Tracker</div>
       { state.user ?
       <div style={{display:"flex"}}>
         <div>{state.user.email}</div>
