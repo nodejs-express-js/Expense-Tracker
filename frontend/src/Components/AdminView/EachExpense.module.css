@@ -1,0 +1,22 @@
+/* EachExpense.module.css */
+
+.expenseContainer {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+  
+  .expenseItem {
+    padding:0.5rem;
+    margin-bottom: 5px;
+  }
+  
+  .expenseType {
+    font-weight: bold;
+  }
+  
+  .date {
+    color: #555;
+  }
+  

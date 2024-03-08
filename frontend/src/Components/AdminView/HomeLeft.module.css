@@ -1,0 +1,24 @@
+.container{
+    background-color: black;
+    color: white;
+    height: 100vh;
+    width: 25%;
+}
+.user{
+cursor: pointer;
+font-size: 2rem;
+}
+.userselected{
+    cursor: pointer;
+    font-size: 2rem;
+    background-color: grey;
+}
+.expenses{
+    cursor: pointer;
+    font-size: 2rem;
+}
+.expensesselected{
+    cursor: pointer;
+    font-size: 2rem;
+    background-color: grey;
+}

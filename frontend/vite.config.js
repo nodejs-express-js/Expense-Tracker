@@ -8,6 +8,8 @@ export default defineConfig({
     proxy:{
       "/expenses":"http://localhost:4000/",
       "/user":"http://localhost:4000/",
+      "/admin/user":"http://localhost:4000/",
+      "/admin/expenses/":"http://localhost:4000/"
     }
   }
 })

@@ -1,0 +1,19 @@
+/* EachUser.module.css */
+
+.container {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+  }
+  
+  .email {
+    font-weight: bold;
+    padding:0.5rem;
+  }
+  
+  .password {
+    color: #555;
+    padding:0.5rem;
+  }
+  
