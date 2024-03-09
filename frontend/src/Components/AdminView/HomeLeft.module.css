@@ -1,7 +1,8 @@
 .container{
     background-color: black;
     color: white;
-    height: 100vh;
+    height: 200vh;
+    overflow-y: auto;
     width: 25%;
 }
 .user{
@@ -11,7 +12,7 @@ font-size: 2rem;
 .userselected{
     cursor: pointer;
     font-size: 2rem;
-    background-color: grey;
+    background-color: red;
 }
 .expenses{
     cursor: pointer;
@@ -20,5 +21,5 @@ font-size: 2rem;
 .expensesselected{
     cursor: pointer;
     font-size: 2rem;
-    background-color: grey;
+    background-color: red;
 }

@@ -23,7 +23,9 @@ const ExpensesContextProvider = ({children}) => {
     const [state,dispatch]=useReducer(expensesReducer,[])
     const {state:userstate}=useUser()
     useEffect(()=>{
+
         const fetchExpenses=async()=>{
+           
             if(userstate.user){
                
                 const response=await fetch("/expenses",{

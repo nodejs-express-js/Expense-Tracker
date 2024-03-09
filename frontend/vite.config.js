@@ -9,7 +9,8 @@ export default defineConfig({
       "/expenses":"http://localhost:4000/",
       "/user":"http://localhost:4000/",
       "/admin/user":"http://localhost:4000/",
-      "/admin/expenses/":"http://localhost:4000/"
+      "/admin/expenses/":"http://localhost:4000/",
+      "/adminuser/login":"http://localhost:4000/"
     }
   }
 })
