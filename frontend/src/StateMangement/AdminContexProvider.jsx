@@ -27,16 +27,31 @@ const AdminContexProvider = ({children}) => {
     const {state:adminuserstate}=useAdminUser()
     useEffect(()=>{
       const fetchUsersAndExpenses=async()=>{
-        const userresponse=await fetch("/admin/user/");
-        const users=await userresponse.json();
-        if(userresponse.ok){
-          dispatch({type:"ADD_USERS",payload:users})
+        if(adminuserstate.adminuser){
+          const userresponse=await fetch("/admin/user/",{
+            method:"GET",
+            headers:{
+              "Content-Type":"application/json",
+              "authorization":`Bearer ${adminuserstate.adminuser.token}`
+            }
+          });
+          const users=await userresponse.json();
+          if(userresponse.ok){
+            dispatch({type:"ADD_USERS",payload:users})
+          }
+          const expensesresponse=await fetch("/admin/expenses/",{
+            method:"GET",
+            headers:{
+              "Content-Type":"application/json",
+              "authorization":`Bearer ${adminuserstate.adminuser.token}`
+            }
+          });
+          const expenses=await expensesresponse.json();
+          if(expensesresponse.ok){
+            dispatch({type:"ADD_EXPENSES",payload:expenses})
+          }
         }
-        const expensesresponse=await fetch("/admin/expenses/");
-        const expenses=await expensesresponse.json();
-        if(expensesresponse.ok){
-          dispatch({type:"ADD_EXPENSES",payload:expenses})
-        }
+       
       }
       fetchUsersAndExpenses()
     },[adminuserstate])

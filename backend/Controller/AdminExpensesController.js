@@ -27,7 +27,7 @@ const deleteAdminUsers=async(req,res)=>{
     try{
         const expenses=await expensesModel.deleteMany({userid:req.params.id})
         const deleted=await expensesUserModel.deleteOne({_id:req.params.id})
-        console.log(req.params.id)
+       
         res.status(200).json(expenses)
     }
     catch(error){
